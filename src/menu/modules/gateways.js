@@ -1,15 +1,15 @@
 export default {
-  path: '/demo/business',
-  title: 'Demo',
+  path: '/gateways',
+  title: 'Gateway',
   icon: 'flask',
   children: (pre => [
-    { path: `${pre}index`, title: 'Demo', icon: 'home' },
+    { path: `${pre}index`, title: 'Gateway', icon: 'home' },
     {
-      path: `${pre}table`,
-      title: 'Table',
+      path: `${pre}category`,
+      title: 'Category',
       icon: 'table',
       children: [
-        { path: `${pre}table/1`, title: 'Table 1' }
+        { path: `${pre}category/online`, title: 'Online Gateways' }
       ]
     },
     {
@@ -20,5 +20,5 @@ export default {
         { path: `${pre}issues/142`, title: '#142' }
       ]
     }
-  ])('/demo/business/')
+  ])('/gateways/')
 }

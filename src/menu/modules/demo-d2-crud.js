@@ -5,6 +5,7 @@ export default {
   children: (pre => [
     { path: `${pre}index`, title: 'D2 CRUD v2', icon: 'home' },
     {
+      path: `${pre}base`,
       title: '基础功能',
       children: [
         { path: `${pre}demo1`, title: '基础表格' },
@@ -28,6 +29,7 @@ export default {
       ]
     },
     {
+      path: `${pre}data`,
       title: '数据操作',
       children: [
         { path: `${pre}demo29`, title: '分页' },

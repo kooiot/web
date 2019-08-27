@@ -14,9 +14,12 @@ import demoBusiness from './modules/demo-business'
 import demoD2Crud from './modules/demo-d2-crud'
 // 第三方网页
 import demoFrame from './modules/demo-frame'
+// 网关列表
+import gateways from './modules/gateways'
 
 // 菜单 侧边栏
 export const menuAside = [
+  gateways,
   demoComponents,
   demoPlugins,
   demoCharts,
@@ -34,6 +37,7 @@ export const menuHeader = [
     title: 'Home',
     icon: 'home'
   },
+  gateways,
   {
     title: 'Features',
     icon: 'puzzle-piece',

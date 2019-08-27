@@ -6,6 +6,7 @@ import charts from './modules/charts'
 import components from './modules/components'
 import element from './modules/element'
 import business from './modules/business'
+import gateways from './modules/gateways'
 
 import layoutHeaderAside from '@/layout/header-aside'
 
@@ -56,6 +57,7 @@ const frameIn = [
       }
     ]
   },
+  gateways,
   playground,
   frame,
   d2Crud,
