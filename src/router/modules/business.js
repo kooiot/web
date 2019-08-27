@@ -18,7 +18,7 @@ export default {
       component: _import('demo/business/index'),
       meta: {
         ...meta,
-        title: '示例首页'
+        title: 'Demo Home'
       }
     },
     {
@@ -27,7 +27,7 @@ export default {
       component: _import('demo/business/table/1'),
       meta: {
         ...meta,
-        title: '表格 1'
+        title: 'Table 1'
       }
     },
     {
@@ -36,7 +36,7 @@ export default {
       component: _import('demo/business/issues/142'),
       meta: {
         ...meta,
-        title: 'issue #142'
+        title: 'Issue #142'
       }
     },
     {
@@ -46,7 +46,7 @@ export default {
       props: true,
       meta: {
         ...meta,
-        title: '无缓存编辑'
+        title: 'Edit without cache'
       }
     },
     {
@@ -56,7 +56,7 @@ export default {
       props: true,
       meta: {
         ...meta,
-        title: '带缓存编辑 DB'
+        title: 'Edit with DB cache'
       }
     }
   ])('demo-business-')

@@ -31,11 +31,11 @@ export const menuAside = [
 export const menuHeader = [
   {
     path: '/index',
-    title: '首页',
+    title: 'Home',
     icon: 'home'
   },
   {
-    title: '功能',
+    title: 'Features',
     icon: 'puzzle-piece',
     children: [
       demoD2Crud,
@@ -45,7 +45,7 @@ export const menuHeader = [
       demoPlugins,
       demoFrame,
       {
-        title: '新窗口打开链接',
+        title: 'Open with new window',
         icon: 'link',
         children: [
           { path: 'https://github.com/d2-projects/d2-admin', title: 'D2Admin Github', icon: 'github' },

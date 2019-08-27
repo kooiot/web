@@ -34,9 +34,9 @@ export default {
     }),
     tooltipContent () {
       return this.logLength === 0
-        ? '没有日志或异常'
-        : `${this.logLength} 条日志${this.logLengthError > 0
-          ? ` | 包含 ${this.logLengthError} 个异常`
+        ? this.$t('No log or exceptions')
+        : `${this.logLength} ${this.$t('logs')}${this.logLengthError > 0
+          ? ` | ${this.$t('include')} ${this.logLengthError} ${this.$t('exceptions')}`
           : ''}`
     }
   },

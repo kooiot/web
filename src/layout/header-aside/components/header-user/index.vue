@@ -1,10 +1,14 @@
 <template>
   <el-dropdown size="small" class="d2-mr">
-    <span class="btn-text">{{info.name ? `你好 ${info.name}` : '未登录'}}</span>
+    <span class="btn-text">{{info.name ? $t('Welcome') + ` ${info.name}` : $t('Guest')}}</span>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item @click.native="logOff">
+      <el-dropdown-item @click.native="logOff" v-if="info.name!==undefined">
         <d2-icon name="power-off" class="d2-mr-5"/>
-        注销
+        {{$t('Logout')}}
+      </el-dropdown-item>
+      <el-dropdown-item @click.native="logIn" v-if="info.name===undefined">
+        <d2-icon name="sign-in" class="d2-mr-5"/>
+        {{$t('Login')}}
       </el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
@@ -29,6 +33,9 @@ export default {
       this.logout({
         confirm: true
       })
+    },
+    logIn () {
+      this.$router.replace({ path: '/login' })
     }
   }
 }

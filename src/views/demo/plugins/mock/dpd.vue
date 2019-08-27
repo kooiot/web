@@ -5,7 +5,7 @@
     <d2-demo-mock-card
       v-for="(item, index) in settingDPD"
       :key="index"
-      :title="item.title"
+      :title="$t(item.title)"
       :code="JSON.stringify(item.json, null, 2)"
       :mock="mockResult[index]"
       style="margin-bottom: 0px !important;"

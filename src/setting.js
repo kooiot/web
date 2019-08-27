@@ -1,3 +1,5 @@
+import i18n from '@/i18n'
+
 export default {
   // 快捷键
   // 支持快捷键 例如 ctrl+shift+s
@@ -18,7 +20,7 @@ export default {
         name: 'index',
         fullPath: '/index',
         meta: {
-          title: '首页',
+          title: 'Home',
           auth: false
         }
       }
@@ -32,29 +34,29 @@ export default {
   theme: {
     list: [
       {
-        title: 'd2admin 经典',
+        title: i18n.t('d2admin classic'),
         name: 'd2',
         preview: 'image/theme/d2/preview@2x.png'
       },
       {
-        title: '紫罗兰',
+        title: i18n.t('violet theme'),
         name: 'violet',
         preview: 'image/theme/violet/preview@2x.png'
       },
       {
-        title: '简约线条',
+        title: i18n.t('line clear'),
         name: 'line',
         backgroundImage: 'image/theme/line/bg.jpg',
         preview: 'image/theme/line/preview@2x.png'
       },
       {
-        title: '流星',
+        title: i18n.t('star theme'),
         name: 'star',
         backgroundImage: 'image/theme/star/bg.jpg',
         preview: 'image/theme/star/preview@2x.png'
       },
       {
-        title: 'Tomorrow Night Blue (vsCode)',
+        title: i18n.t('Tomorrow Night Blue (vsCode)'),
         name: 'tomorrow-night-blue',
         preview: 'image/theme/tomorrow-night-blue/preview@2x.png'
       }

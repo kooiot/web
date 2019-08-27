@@ -26,7 +26,7 @@ const frameIn = [
         path: 'index',
         name: 'index',
         meta: {
-          auth: true
+          auth: false
         },
         component: _import('system/index')
       },
@@ -35,7 +35,7 @@ const frameIn = [
         path: 'log',
         name: 'log',
         meta: {
-          title: '前端日志',
+          title: 'Web Log',
           auth: true
         },
         component: _import('system/log')

@@ -9,10 +9,10 @@
     </div>
     <div class="d2-panel-search-item__info" flex-box="1" flex="dir:top">
       <div class="d2-panel-search-item__info-title" flex-box="1" flex="cross:center">
-        <span>{{item.title}}</span>
+        <span>{{$t(item.title)}}</span>
       </div>
       <div class="d2-panel-search-item__info-fullTitle" flex-box="0">
-        <span>{{item.fullTitle}}</span>
+        <span>{{$t(item.fullTitle)}}</span>
       </div>
       <div class="d2-panel-search-item__info-path" flex-box="0">
         <span>{{item.path}}</span>

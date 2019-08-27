@@ -5,19 +5,19 @@
     <d2-demo-mock-card
       v-for="(item, index) in settingDTD"
       :key="index"
-      :title="item.title"
+      :title="$t(item.title)"
       :code="JSON.stringify(item.json, null, 2)"
       :mock="mockResult[index]"
       @reload="doMock(index)">
     </d2-demo-mock-card>
     <d2-demo-mock-card
-      :title="fn.title"
+      :title="$t(fn.title)"
       :code="fn.code"
       :mock="fn.mocked"
       @reload="fnMock()">
     </d2-demo-mock-card>
     <d2-demo-mock-card
-      :title="regexp.title"
+      :title="$t(regexp.title)"
       :code="regexp.code"
       :mock="regexp.mocked"
       style="margin-bottom: 0px !important;"

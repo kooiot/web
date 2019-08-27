@@ -12,7 +12,7 @@
             v-for="item in setting"
             :key="item.component"
             @click="onClick(item)">
-            {{item.title}}
+            {{$t(item.title)}}
           </el-button>
         </el-button-group>
       </el-form-item>

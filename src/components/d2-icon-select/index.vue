@@ -13,7 +13,7 @@
           size="mini"
           class="d2-fr"
           @click="selectIcon()">
-          清空
+          {{$t('Clear')}}
         </el-button>
       </el-row>
       <el-input
@@ -23,7 +23,7 @@
         prefix-icon="el-icon-search">
       </el-input>
       <el-collapse v-if="!searchMode" class="d2-icon-select--group" v-model="collapseActive">
-        <el-collapse-item v-for="(item, index) in icon" :key="index" :title="item.title" :name="index" class="d2-icon-select--class">
+        <el-collapse-item v-for="(item, index) in icon" :key="index" :title="$t(item.title)" :name="index" class="d2-icon-select--class">
           <el-row class="d2-icon-select--class-row">
             <el-col class="d2-icon-select--class-col" v-for="(iconName, iconIndex) in item.icon" :key="iconIndex" :span="4" @click.native="selectIcon(iconName)">
               <i :class="'fa fa-' + iconName"></i>
@@ -33,7 +33,7 @@
       </el-collapse>
       <div v-if="searchMode" class="d2-icon-select--group">
         <div class="d2-icon-select--class" v-for="(item, index) in iconFilted" :key="index">
-          <div class="d2-icon-select--class-title">{{item.title}}</div>
+          <div class="d2-icon-select--class-title">{{$t(item.title)}}</div>
           <el-row class="d2-icon-select--class-row">
             <el-col class="d2-icon-select--class-col" v-for="(iconName, iconIndex) in item.icon" :key="iconIndex" :span="4" @click.native="selectIcon(iconName)">
               <i :class="'fa fa-' + iconName"></i>

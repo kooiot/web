@@ -1,14 +1,14 @@
 export default {
   path: '/demo/business',
-  title: '示例',
+  title: 'Demo',
   icon: 'flask',
   children: (pre => [
-    { path: `${pre}index`, title: '示例', icon: 'home' },
+    { path: `${pre}index`, title: 'Demo', icon: 'home' },
     {
-      title: '表格',
+      title: 'Table',
       icon: 'table',
       children: [
-        { path: `${pre}table/1`, title: '表格 1' }
+        { path: `${pre}table/1`, title: 'Table 1' }
       ]
     },
     {

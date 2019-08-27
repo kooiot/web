@@ -7,7 +7,7 @@
       align="center"
       width="160"/>
     <el-table-column
-      label="预览"
+      :label="$t('Preview')"
       width="120">
       <div
         slot-scope="scope"
@@ -26,13 +26,13 @@
           type="success"
           icon="el-icon-check"
           round>
-          已激活
+          {{$t('In use')}}
         </el-button>
         <el-button
           v-else
           round
           @click="handleSelectTheme(scope.row.name)">
-          使用
+          {{$t('Use this')}}
         </el-button>
       </template>
     </el-table-column>

@@ -1,17 +1,17 @@
 export default {
   path: '/demo/charts',
-  title: '图表',
+  title: 'Charts',
   icon: 'line-chart',
   children: (pre => [
-    { path: `${pre}index`, title: '图表', icon: 'home' },
+    { path: `${pre}index`, title: 'Charts', icon: 'home' },
     {
       path: `${pre}list`,
-      title: '图表',
+      title: 'Charts',
       icon: 'cube',
       children: [
         {
           path: `${pre}list/line`,
-          title: '折线图',
+          title: 'Line',
           children: [
             { path: `${pre}list/line/demo1`, title: '一般' },
             { path: `${pre}list/line/demo2`, title: '横坐标倾斜' },

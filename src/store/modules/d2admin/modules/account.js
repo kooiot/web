@@ -2,6 +2,7 @@ import { Message, MessageBox } from 'element-ui'
 import util from '@/libs/util.js'
 import router from '@/router'
 import { AccountLogin } from '@api/sys.login'
+import i18n from '@/i18n'
 
 export default {
   namespaced: true,
@@ -69,9 +70,7 @@ export default {
       // 判断是否需要确认
       if (confirm) {
         commit('d2admin/gray/set', true, { root: true })
-        MessageBox.confirm('确定要注销当前用户吗', '注销用户', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
+        MessageBox.confirm(i18n.t('Are you sure to logout current user'), 'User logout', {
           type: 'warning'
         })
           .then(() => {
