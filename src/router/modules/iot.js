@@ -9,12 +9,12 @@ export default {
   path: '/iot',
   name: 'iot',
   meta,
-  redirect: { name: 'iot-index' },
+  redirect: { name: 'iot-dashboard' },
   component: layoutHeaderAside,
   children: (pre => [
     {
-      path: 'index',
-      name: `${pre}index`,
+      path: 'dashboard',
+      name: `${pre}dashboard`,
       component: _import('demo/business/index'),
       meta: {
         ...meta,
@@ -25,6 +25,7 @@ export default {
       path: 'gateways/private',
       name: `${pre}gateway-private`,
       component: _import('iot/gateways'),
+      props: true,
       meta: {
         ...meta,
         title: 'Private Gateways',
@@ -35,6 +36,7 @@ export default {
       path: 'gateways/company',
       name: `${pre}gateway-company`,
       component: _import('iot/gateways'),
+      props: true,
       meta: {
         ...meta,
         title: 'Company Gateways',
@@ -45,10 +47,29 @@ export default {
       path: 'gateways/shared',
       name: `${pre}gateway-shared`,
       component: _import('iot/gateways'),
+      props: true,
       meta: {
         ...meta,
         title: 'Shared Gateways',
         category: 'shared'
+      }
+    },
+    {
+      path: 'events/device',
+      name: `${pre}events-device`,
+      component: _import('iot/events/device'),
+      meta: {
+        ...meta,
+        title: 'Device Events'
+      }
+    },
+    {
+      path: 'events/platform',
+      name: `${pre}events-platform`,
+      component: _import('iot/events/platform'),
+      meta: {
+        ...meta,
+        title: 'Platform Activities'
       }
     }
   ])('iot-')

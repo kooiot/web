@@ -18,6 +18,8 @@ import demoFrame from './modules/demo-frame'
 import iot from './modules/iot'
 // 应用中心
 import store from './modules/store'
+// 工单
+import tickets from './modules/tickets'
 // 帮助中心
 import help from './modules/help'
 
@@ -25,6 +27,7 @@ import help from './modules/help'
 export const menuAside = [
   iot,
   store,
+  tickets,
   help,
   demoComponents,
   demoPlugins,
@@ -45,6 +48,7 @@ export const menuHeader = [
   },
   iot,
   store,
+  tickets,
   help,
   {
     title: 'Features',

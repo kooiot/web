@@ -79,5 +79,14 @@
 	"Quick Guide": "快速指南",
 	"API Reference": "API手册",
 	"Development Book": "开发文档",
-	"Github": "Github"
+	"Github": "Github",
+	"Tickets": "工单",
+	"New Ticket": "新工单",
+	"Tickets Center": "工单系统",
+	"My Tickets": "我的工单",
+	"Open Tickets": "未解决工单",
+	"Closed Tickets": "已解决工单",
+	"Events": "事件列表",
+	"Device Events": "设备事件",
+	"Platform Activities": "平台事件"
 }

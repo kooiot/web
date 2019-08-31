@@ -7,7 +7,8 @@ import components from './modules/components'
 import element from './modules/element'
 import business from './modules/business'
 import iot from './modules/iot'
-import appCenter from './modules/store'
+import store from './modules/store'
+import tickets from './modules/tickets'
 import help from './modules/help'
 
 import layoutHeaderAside from '@/layout/header-aside'
@@ -60,7 +61,8 @@ const frameIn = [
     ]
   },
   iot,
-  appCenter,
+  store,
+  tickets,
   help,
   playground,
   frame,

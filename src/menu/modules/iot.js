@@ -3,7 +3,7 @@ export default {
   title: 'Internet of Things',
   icon: 'puzzle-piece',
   children: (pre => [
-    { path: `${pre}index`, title: 'Dashboard', icon: 'dashboard' },
+    { path: `${pre}dashboard`, title: 'Dashboard', icon: 'dashboard' },
     {
       path: `${pre}gateways`,
       title: 'Gateways',
@@ -15,11 +15,12 @@ export default {
       ]
     },
     {
-      path: `${pre}issues`,
-      title: 'ISSUES',
-      icon: 'github',
+      path: `${pre}events`,
+      title: 'Events',
+      icon: 'bell',
       children: [
-        { path: `${pre}issues/142`, title: '#142' }
+        { path: `${pre}events/device`, title: 'Device Events', icon: 'comment' },
+        { path: `${pre}events/platform`, title: 'Platform Activities', icon: 'rss-square' }
       ]
     }
   ])('/iot/')
