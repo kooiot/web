@@ -9,6 +9,8 @@ import store from '@/store/index'
 
 import util from '@/libs/util.js'
 
+import i18n from '@/i18n'
+
 // 路由数据
 import routes from './routes'
 
@@ -63,7 +65,7 @@ router.afterEach(to => {
   // 多页控制 打开新的页面
   store.dispatch('d2admin/page/open', to)
   // 更改标题
-  util.title(to.meta.title)
+  util.title(i18n.t(to.meta.title))
 })
 
 export default router

@@ -6,7 +6,9 @@ import charts from './modules/charts'
 import components from './modules/components'
 import element from './modules/element'
 import business from './modules/business'
-import gateways from './modules/gateways'
+import iot from './modules/iot'
+import appCenter from './modules/store'
+import help from './modules/help'
 
 import layoutHeaderAside from '@/layout/header-aside'
 
@@ -57,7 +59,9 @@ const frameIn = [
       }
     ]
   },
-  gateways,
+  iot,
+  appCenter,
+  help,
   playground,
   frame,
   d2Crud,
