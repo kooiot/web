@@ -88,5 +88,9 @@
 	"Closed Tickets": "已解决工单",
 	"Events": "事件列表",
 	"Device Events": "设备事件",
-	"Platform Activities": "平台事件"
+	"Platform Activities": "平台事件",
+	"Status": "状态",
+	"APPS": "应用",
+	"Mode": "模式",
+	"Unactived": "未激活"
 }

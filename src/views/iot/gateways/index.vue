@@ -17,11 +17,10 @@
 </template>
 
 <script>
-import { BusinessTable1List } from '@api/demo.business.table.1'
-import util from '@/libs/util.js'
+import { fetch } from '@api/gateways'
 export default {
   // name 值和本页的 $route.name 一致才可以缓存页面
-  name: 'demo-business-table-1',
+  name: 'iot-gateways',
   components: {
     'DemoPageHeader': () => import('./componnets/PageHeader'),
     'DemoPageMain': () => import('./componnets/PageMain'),
@@ -40,17 +39,34 @@ export default {
   },
   // 第一次进入或从其他组件对应路由进入时触发
   beforeRouteEnter (to, from, next) {
-    console.log(to)
-    util.title(to.meta.category)
-    next()
+    const category = to.meta.category
+    if (category) {
+      next(instance => {
+        instance.name = 'iot-gateways-' + to.meta.category
+        instance.getFormData(category)
+      })
+    } else {
+      next(new Error('未指定ID'))
+    }
   },
   // 在同一组件对应的多个路由间切换时触发
   beforeRouteUpdate (to, from, next) {
-    console.log(to)
-    util.title(to.meta.category)
-    next()
+    const category = to.meta.category
+    if (category) {
+      this.resetFormData()
+      this.getFormData(category)
+      next()
+    } else {
+      next(new Error('未指定ID'))
+    }
   },
   methods: {
+    getFormData (category) {
+
+    },
+    resetFormData () {
+
+    },
     handlePaginationChange (val) {
       this.$notify({
         title: '分页变化',
@@ -67,7 +83,7 @@ export default {
       this.$notify({
         title: '开始请求模拟表格数据'
       })
-      BusinessTable1List({
+      fetch({
         ...form,
         ...this.page
       })

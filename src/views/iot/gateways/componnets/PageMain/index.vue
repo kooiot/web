@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--
     <el-form
       :inline="true"
       size="mini">
@@ -40,7 +41,7 @@
         </el-button-group>
       </el-form-item>
     </el-form>
-
+    -->
     <el-table
       :data="currentTableData"
       v-loading="loading"
@@ -54,13 +55,19 @@
         width="55">
       </el-table-column>
 
-      <el-table-column label="卡密" :show-overflow-tooltip="true">
+      <el-table-column :label="$t('Gateway SN')" :show-overflow-tooltip="true">
         <template slot-scope="scope">
-          {{scope.row.key}}
+          {{scope.row.sn}}
         </template>
       </el-table-column>
 
-      <el-table-column label="面值" width="60" align="center">
+      <el-table-column :label="$t('Description')" :show-overflow-tooltip="true">
+        <template slot-scope="scope">
+          {{scope.row.desc}}
+        </template>
+      </el-table-column>
+
+      <el-table-column :label="$t('APPS')" width="60" align="center">
         <template slot-scope="scope">
           <el-tag
             size="mini"
@@ -70,7 +77,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column label="状态" width="50" align="center">
+      <el-table-column :label="$t('Status')" width="50" align="center">
         <template slot-scope="scope">
           <boolean-control
             :value="scope.row.type"
@@ -89,7 +96,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column label="状态" width="50" align="center">
+      <el-table-column :label="$t('Status')" width="50" align="center">
         <template slot-scope="scope">
           <boolean-control-mini
             :value="scope.row.type"
@@ -108,40 +115,47 @@
         </template>
       </el-table-column>
 
-      <el-table-column label="管理员" width="60">
-        <template slot-scope="scope">
-          {{scope.row.admin}}
-        </template>
-      </el-table-column>
-
-      <el-table-column label="管理员备注" :show-overflow-tooltip="true">
-        <template slot-scope="scope">
-          {{scope.row.adminNote}}
-        </template>
-      </el-table-column>
-
-      <el-table-column label="创建时间" width="150" :show-overflow-tooltip="true">
+      <el-table-column :label="$t('Status Timestamp')" width="150" :show-overflow-tooltip="true">
         <template slot-scope="scope">
           {{scope.row.dateTimeCreat}}
         </template>
       </el-table-column>
 
-      <el-table-column label="使用状态" width="100" align="center">
+      <el-table-column :label="$t('Status')" width="100" align="center">
         <template slot-scope="scope">
           <el-tag
             size="mini"
-            :type="scope.row.used ? 'info' : ''">
-            {{scope.row.used ? '已使用' : '未使用'}}
+            :type="scope.row.status === 'ONLINE' ? 'success' : null | scope.row.status === 'OFFLINE' ? 'warning' : null | 'info'">
+            {{scope.row.status ? $t(scope.row.status) : $t('Unactived')}}
           </el-tag>
         </template>
       </el-table-column>
 
-      <el-table-column label="使用时间" width="150" :show-overflow-tooltip="true">
+      <el-table-column
+        prop="tag"
+        label="Tag"
+        width="100"
+        :filters="[{ text: '家', value: '家' }, { text: '公司', value: '公司' }]"
+        :filter-method="filterTag"
+        filter-placement="bottom-end">
         <template slot-scope="scope">
-          {{scope.row.dateTimeUse}}
+          <el-tag
+            :type="scope.row.tag === '家' ? 'primary' : 'success'"
+            disable-transitions>{{scope.row.tag}}</el-tag>
         </template>
       </el-table-column>
 
+      <el-table-column label="操作">
+        <template slot-scope="scope">
+          <el-button
+            size="mini"
+            @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+          <el-button
+            size="mini"
+            type="danger"
+            @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+        </template>
+      </el-table-column>
     </el-table>
   </div>
 </template>
@@ -174,7 +188,8 @@ export default {
         { label: '管理员备注', prop: 'adminNote' },
         { label: '创建时间', prop: 'dateTimeCreat' },
         { label: '使用状态', prop: 'used' },
-        { label: '使用时间', prop: 'dateTimeUse' }
+        { label: '使用时间', prop: 'dateTimeUse' },
+        { label: '标签', prop: 'tag' }
       ]
     }
   },
@@ -187,6 +202,9 @@ export default {
     }
   },
   methods: {
+    filterTag (value, row) {
+      return row.tag === value
+    },
     handleSwitchChange (val, index) {
       const oldValue = this.currentTableData[index]
       this.$set(this.currentTableData, index, {
