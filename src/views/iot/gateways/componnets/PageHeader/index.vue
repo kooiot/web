@@ -20,7 +20,7 @@
 
     <el-form-item label="Search" prop="note">
       <el-input
-        v-model="form.note"
+        v-model="form.filter"
         placeholder="Enter Search Content"
         style="width: 180px;"/>
     </el-form-item>
@@ -51,7 +51,7 @@ export default {
     return {
       form: {
         status: 'ONLINE',
-        search: ''
+        filter: ''
       },
       rules: {
         status: [ { required: true, message: '请选择一个状态', trigger: 'change' } ]

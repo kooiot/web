@@ -92,5 +92,9 @@
 	"Status": "状态",
 	"APPS": "应用",
 	"Mode": "模式",
-	"Unactived": "未激活"
+	"Unactived": "未激活",
+	"ONLINE": "在线",
+	"OFFLINE": "离线",
+	"Gateway SN": "网关序列号",
+	"Description": "描述"
 }

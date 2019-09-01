@@ -55,7 +55,7 @@
         width="55">
       </el-table-column>
 
-      <el-table-column :label="$t('Gateway SN')" :show-overflow-tooltip="true">
+      <el-table-column :label="$t('Gateway SN')" width="240"  :show-overflow-tooltip="true">
         <template slot-scope="scope">
           {{scope.row.sn}}
         </template>
@@ -115,7 +115,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column :label="$t('Status Timestamp')" width="150" :show-overflow-tooltip="true">
+      <el-table-column :label="$t('Status Timestamp')" width="140" :show-overflow-tooltip="true">
         <template slot-scope="scope">
           {{scope.row.dateTimeCreat}}
         </template>
@@ -125,7 +125,7 @@
         <template slot-scope="scope">
           <el-tag
             size="mini"
-            :type="scope.row.status === 'ONLINE' ? 'success' : null | scope.row.status === 'OFFLINE' ? 'warning' : null | 'info'">
+            :type="scope.row.status === 'ONLINE' ? 'success' : ( scope.row.status === 'OFFLINE' ? 'warning' : 'info' )">
             {{scope.row.status ? $t(scope.row.status) : $t('Unactived')}}
           </el-tag>
         </template>

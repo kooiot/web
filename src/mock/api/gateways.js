@@ -1,8 +1,9 @@
 export default [
   {
-    path: '/api/v1/ioe_api.gateways.list',
+    path: '/api/api/v1/ioe_api.gateways.list.*',
     method: 'get',
     handle ({ params, Repeat }) {
+      console.log('Gateways List Mock!!!')
       let { pageSize } = params
       return {
         code: 0,
@@ -12,14 +13,14 @@ export default [
             total: 1000
           },
           list: Repeat(pageSize, {
-            'key': '@guid',
+            'sn': '@string("number|upper", 16, 20)',
+            'desc': '@cparagraph(0.5)',
             'value|1': [10, 100, 200, 500],
-            'type': '@boolean',
+            'status|1': ['ONLINE', 'OFFLINE', ''],
             'admin': '@cname',
-            'adminNote': '@cparagraph(0.5)',
             'dateTimeCreat': '@datetime',
             'used': '@boolean',
-            'dateTimeUse': '@datetime'
+            'tag|1': ['家', '公司']
           })
         }
       }
