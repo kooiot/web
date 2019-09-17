@@ -41,9 +41,13 @@ export default {
   beforeRouteEnter (to, from, next) {
     const category = to.meta.category
     if (category) {
-      next(instance => {
-        instance.name = 'iot-gateways-' + to.meta.category
-        instance.getFormData(category)
+      next(async instance => {
+        if (from.name === 'demo-business-issues-142') {
+          await instance.getFormData(category)
+          instance.saveDataToDb()
+        } else {
+          instance.loadDataFromDb(to)
+        }
       })
     } else {
       next(new Error('未指定ID'))
@@ -53,8 +57,7 @@ export default {
   beforeRouteUpdate (to, from, next) {
     const category = to.meta.category
     if (category) {
-      this.resetFormData()
-      this.getFormData(category)
+      this.loadDataFromDb(to)
       next()
     } else {
       next(new Error('未指定ID'))
@@ -66,6 +69,27 @@ export default {
     },
     resetFormData () {
 
+    },
+    // 将页面数据同步到持久化存储
+    saveDataToDb () {
+      this.pageSet({ instance: this, user: true })
+    },
+    // 从持久化存储恢复数据到页面
+    async loadDataFromDb (to) {
+      const instance = {
+        $route: {
+          fullPath: to.fullPath
+        },
+        $data: {}
+      }
+      const data = await this.pageGet({
+        instance,
+        user: true
+      })
+      for (const key in data) {
+        if (data.hasOwnProperty(key)) this[key] = data[key]
+      }
+      this.$message.success('loadDataFromDb')
     },
     handlePaginationChange (val) {
       this.$notify({

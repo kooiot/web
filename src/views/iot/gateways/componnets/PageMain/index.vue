@@ -242,6 +242,12 @@ export default {
         .then(() => {
           this.$message('导出CSV成功')
         })
+    },
+    handleEdit (index, row) {
+      console.log(index, row)
+    },
+    handleDelete (index, row) {
+      console.log(index, row)
     }
   }
 }
