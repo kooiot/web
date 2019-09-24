@@ -96,5 +96,8 @@
 	"ONLINE": "在线",
 	"OFFLINE": "离线",
 	"Gateway SN": "网关序列号",
-	"Description": "描述"
+	"Description": "描述",
+	"Yes": "是",
+	"No": "否",
+	"Beta": "开发模式"
 }

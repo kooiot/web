@@ -7,10 +7,10 @@
       :model="form"
       label-width="80px"
       class="page--form">
-      <el-form-item label="姓名">
+      <el-form-item label="网关服务器设定">
         <el-input v-model="form.name"/>
       </el-form-item>
-      <el-form-item label="地址">
+      <el-form-item label="配置文件">
         <el-input type="textarea" v-model="form.address"/>
       </el-form-item>
       <el-form-item>
@@ -32,7 +32,8 @@ export default {
     const id = to.params.id
     if (id) {
       next(async instance => {
-        if (from.name === 'demo-business-issues-142') {
+        console.log(from.name)
+        if (from.name !== 'iot-gateways-settings') {
           await instance.getFormData(id)
           instance.saveDataToDb()
         } else {
@@ -45,6 +46,7 @@ export default {
   beforeRouteUpdate (to, from, next) {
     const id = to.params.id
     if (id) {
+      console.log(id)
       this.loadDataFromDb(to)
       next()
     }

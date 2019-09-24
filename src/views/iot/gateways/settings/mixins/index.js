@@ -1,6 +1,6 @@
 import {
   detail
-} from '@api/demo.business.issues.142'
+} from '@api/iot.gateways'
 
 export default {
   props: {
@@ -39,7 +39,7 @@ export default {
             resolve()
           })
           .catch(err => {
-            console.log('err', err)
+            console.log('getFormData failed!', err)
             reject(err)
           })
       })

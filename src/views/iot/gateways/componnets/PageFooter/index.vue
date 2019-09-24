@@ -27,15 +27,15 @@ export default {
   methods: {
     handleSizeChange (val) {
       this.$emit('change', {
-        current: this.current,
-        size: val,
+        currentPage: this.current,
+        pageSize: val,
         total: this.total
       })
     },
     handleCurrentChange (val) {
       this.$emit('change', {
-        current: val,
-        size: this.size,
+        currentPage: val,
+        pageSize: this.size,
         total: this.total
       })
     }

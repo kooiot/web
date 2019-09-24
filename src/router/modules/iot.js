@@ -23,7 +23,7 @@ export default {
     },
     {
       path: 'gateways/private',
-      name: `${pre}gateway-private`,
+      name: `${pre}gateways-private`,
       component: _import('iot/gateways'),
       props: true,
       meta: {
@@ -34,7 +34,7 @@ export default {
     },
     {
       path: 'gateways/company',
-      name: `${pre}gateway-company`,
+      name: `${pre}gateways-company`,
       component: _import('iot/gateways'),
       props: true,
       meta: {
@@ -45,13 +45,23 @@ export default {
     },
     {
       path: 'gateways/shared',
-      name: `${pre}gateway-shared`,
+      name: `${pre}gateways-shared`,
       component: _import('iot/gateways'),
       props: true,
       meta: {
         ...meta,
         title: 'Shared Gateways',
         category: 'shared'
+      }
+    },
+    {
+      path: 'gateways/settings/:id',
+      name: `${pre}gateways-settings`,
+      component: _import('iot/gateways/settings'),
+      props: true,
+      meta: {
+        ...meta,
+        title: 'Gateway Settings'
       }
     },
     {
