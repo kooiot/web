@@ -15,13 +15,15 @@
     <el-card shadow="never" class="d2-mb">
       <d2-highlight :code="code"/>
     </el-card>
-    <template slot="footer">
-      <d2-link-btn title="文档" link="https://doc.d2admin.fairyever.com/zh/ecosystem-d2-crud/"/>
-    </template>
+    <d2-link-btn
+      slot="footer"
+      title="文档"
+      link="https://d2.pub/zh/doc/d2-crud-v2"/>
   </d2-container>
 </template>
 
 <script>
+import '../install'
 import doc from './doc.md'
 import code from './code.js'
 

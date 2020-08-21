@@ -7,8 +7,11 @@ import 'flex.css'
 import '@/components'
 // svg 图标
 import '@/assets/svg-icons'
+// 国际化
+import i18n from '@/i18n.js'
 
 // 功能插件
+import pluginApi from '@/plugin/api'
 import pluginError from '@/plugin/error'
 import pluginLog from '@/plugin/log'
 import pluginOpen from '@/plugin/open'
@@ -27,8 +30,11 @@ export default {
     // 构建时间
     Vue.prototype.$buildTime = process.env.VUE_APP_BUILD_TIME
     // Element
-    Vue.use(ElementUI)
+    Vue.use(ElementUI, {
+      i18n: (key, value) => i18n.t(key, value)
+    })
     // 插件
+    Vue.use(pluginApi)
     Vue.use(pluginError)
     Vue.use(pluginLog)
     Vue.use(pluginOpen)

@@ -1,5 +1,3 @@
-import i18n from '@/i18n'
-
 export default {
   // 快捷键
   // 支持快捷键 例如 ctrl+shift+s
@@ -9,9 +7,10 @@ export default {
       close: 'esc'
     }
   },
-  // 侧边栏默认折叠状态
+  // 侧边栏默认配置
   menu: {
-    asideCollapse: false
+    asideCollapse: false,
+    asideTransition: true
   },
   // 在读取持久化数据失败时默认页面
   page: {
@@ -34,29 +33,39 @@ export default {
   theme: {
     list: [
       {
-        title: i18n.t('d2admin classic'),
+        title: 'd2admin classic',
         name: 'd2',
         preview: 'image/theme/d2/preview@2x.png'
       },
       {
-        title: i18n.t('violet theme'),
+        title: 'Chester',
+        name: 'chester',
+        preview: 'image/theme/chester/preview@2x.png'
+      },
+      {
+        title: 'Element',
+        name: 'element',
+        preview: 'image/theme/element/preview@2x.png'
+      },
+      {
+        title: 'violet theme',
         name: 'violet',
         preview: 'image/theme/violet/preview@2x.png'
       },
       {
-        title: i18n.t('line clear'),
+        title: 'line clear',
         name: 'line',
         backgroundImage: 'image/theme/line/bg.jpg',
         preview: 'image/theme/line/preview@2x.png'
       },
       {
-        title: i18n.t('star theme'),
+        title: this.$t('star theme'),
         name: 'star',
         backgroundImage: 'image/theme/star/bg.jpg',
         preview: 'image/theme/star/preview@2x.png'
       },
       {
-        title: i18n.t('Tomorrow Night Blue (vsCode)'),
+        title: this.$t('Tomorrow Night Blue (vsCode)'),
         name: 'tomorrow-night-blue',
         preview: 'image/theme/tomorrow-night-blue/preview@2x.png'
       }

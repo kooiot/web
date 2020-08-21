@@ -10,10 +10,8 @@
 <script>
 import marked from 'marked'
 import highlight from 'highlight.js'
-import '../highlight-styles/github-gist.css'
 import bandupan from './plugin/baidupan'
 import 'github-markdown-css'
-import { ComponentsMarkdownBase } from '@api/components.markdown'
 export default {
   name: 'd2-markdown',
   props: {
@@ -65,7 +63,7 @@ export default {
     },
     // 从 url 加载原始数据
     async getReadme (url) {
-      const data = await ComponentsMarkdownBase(url)
+      const data = await this.$api.FILE_GET(url)
       return this.marked(data)
     },
     marked (data) {

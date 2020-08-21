@@ -14,6 +14,8 @@
 <script>
 import BetaMode from '../BetaMode'
 export default {
+  components: {
+  },
   props: {
     tableData: {
       default: () => []
@@ -26,8 +28,8 @@ export default {
     columns () {
       return [
         {
-          title: this.$t('Gateway SN'),
-          key: 'sn',
+          title: this.$t('Name'),
+          key: 'dev_name',
           width: '240'
         },
         {
@@ -63,42 +65,55 @@ export default {
       return {
         columnHeader: this.$t('Operations'),
         align: 'center',
-        width: 240,
+        width: 360,
+        edit: {
+          icon: 'el-icon-edit',
+          text: 'Edit',
+          size: 'mini'
+        },
         custom: [
-          {
-            icon: 'el-icon-edit',
-            text: 'Edit',
-            size: 'mini',
-            emit: 'edit'
-          },
           {
             icon: 'el-icon-settings',
             text: 'Settings',
             size: 'mini',
-            emit: 'setting'
+            emit: 'row-setting'
           }
-        ]
+        ],
+        remove: {
+          icon: 'el-icon-delete',
+          text: 'Delete',
+          size: 'mini',
+          confirm: true,
+          show (index, row) {
+            if (!row.forbidRemove) {
+              return true
+            }
+            return false
+          },
+          disabled (index, row) {
+            if (row.forbidRemove) {
+              return true
+            }
+            return false
+          }
+        }
       }
     },
     editTemplate () {
       return {
-        date: {
-          title: '日期',
+        dev_name: {
+          title: 'Name',
           value: ''
         },
-        name: {
-          title: '姓名',
+        description: {
+          title: 'Description',
           value: ''
         },
-        address: {
-          title: '地址',
-          value: ''
-        },
-        check: {
+        use_beta: {
           title: '检查状态（点击进行修改）',
-          value: false,
+          value: 0,
           component: {
-            name: BetaMode
+            name: 'beta-mode'
           }
         }
       }
@@ -116,7 +131,7 @@ export default {
   watch: {
     tableData: {
       handler (val) {
-        this.data = val
+        this.currentTableData = val
       },
       immediate: true
     }

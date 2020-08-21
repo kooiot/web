@@ -1,42 +1,44 @@
-![banner](https://raw.githubusercontent.com/FairyEver/d2-admin/master/doc/image/banner.png)
+![banner](https://raw.githubusercontent.com/FairyEver/d2-admin/master/docs/image/banner.png)
 
 <p align="center">
-  <a><img src="https://img.shields.io/github/release/d2-projects/d2-admin.svg"/></a>
-  <a><img src="https://img.shields.io/npm/v/@d2-admin/ice-scaffold.svg"/></a>
-  <a><img src="https://img.shields.io/github/last-commit/d2-projects/d2-admin.svg"/></a>
-  <a><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"/></a>
+	<a href="https://github.com/d2-projects/d2-admin/stargazers" target="_blank"><img src="https://img.shields.io/github/stars/d2-projects/d2-admin.svg"></a>
+	<a href="https://github.com/d2-projects/d2-admin/network/members" target="_blank"><img src="https://img.shields.io/github/forks/d2-projects/d2-admin.svg"></a>
+	<a href="https://github.com/d2-projects/d2-admin/issues" target="_blank"><img src="https://img.shields.io/github/issues/d2-projects/d2-admin.svg"></a>
+	<a href="https://github.com/d2-projects/d2-admin/issues?q=is%3Aissue+is%3Aclosed" target="_blank"><img src="https://img.shields.io/github/issues-closed/d2-projects/d2-admin.svg"></a>
+	<a href="https://github.com/d2-projects/d2-admin/pulls" target="_blank"><img src="https://img.shields.io/github/issues-pr/d2-projects/d2-admin.svg"></a>
+	<a href="https://github.com/d2-projects/d2-admin/pulls?q=is%3Apr+is%3Aclosed" target="_blank"><img src="https://img.shields.io/github/issues-pr-closed/d2-projects/d2-admin.svg"></a>
+	<a href="https://github.com/d2-projects/d2-admin" target="_blank"><img src="https://img.shields.io/github/last-commit/d2-projects/d2-admin.svg"></a>
 </p>
-
 <p align="center">
-	<a><img src="https://img.shields.io/github/issues/d2-projects/d2-admin.svg"/></a>
-	<a><img src="https://img.shields.io/github/issues-closed/d2-projects/d2-admin.svg"/></a>
-	<a><img src="https://img.shields.io/github/issues-pr/d2-projects/d2-admin.svg"/></a>
-	<a><img src="https://img.shields.io/github/issues-pr-closed/d2-projects/d2-admin.svg"/></a>
-	<a><img src="https://img.shields.io/github/forks/d2-projects/d2-admin.svg"/></a>
-	<a><img src="https://img.shields.io/github/stars/d2-projects/d2-admin.svg"/></a>
+	<a href="https://github.com/d2-projects/d2-admin" target="_blank"><img src="https://visitor-count-badge.herokuapp.com/today.svg?repo_id=d2-projects.d2-admin"></a>
+	<a href="https://github.com/d2-projects/d2-admin" target="_blank"><img src="https://visitor-count-badge.herokuapp.com/total.svg?repo_id=d2-projects.d2-admin"></a>
+	<a href="https://github.com/d2-projects/d2-admin/releases" target="_blank"><img src="https://img.shields.io/github/release/d2-projects/d2-admin.svg"></a>
+	<a href="https://deepscan.io/dashboard#view=project&tid=8014&pid=10161&bid=136697"><img src="https://deepscan.io/api/teams/8014/projects/10161/branches/136697/badge/grade.svg" alt="DeepScan grade"></a>
 </p>
 
-<p align="center">
-	<a href="https://www.travis-ci.org/d2-projects/d2-admin">
-		<img src="https://www.travis-ci.org/d2-projects/d2-admin.svg?branch=master"/>
-	</a>
-	<a href="https://app.netlify.com/sites/d2-admin/deploys">
-		<img src="https://api.netlify.com/api/v1/badges/a5dd4bbd-da3f-4145-98a9-8012577bdcf5/deploy-status"/>
-	</a>
-</p>
+[D2Admin](https://github.com/d2-projects/d2-admin) is a fully open source and free enterprise back-end product front-end integration solution, using the latest front-end technology stack, javascript files loading of local first screen less than 60kb, has prepared most of the project preparations, and with a lot of sample code to help the management system agile development.
 
-D2Admin is a fully open source and free enterprise back-end product front-end integration solution, using the latest front-end technology stack, has prepared most of the project preparations, and with a lot of sample code to help the management system agile development.
-
-[中文介绍](https://github.com/d2-projects/d2-admin/blob/master/README.zh.md) | **English**
-
-## Document
-
-[Document](https://doc.d2admin.fairyever.com)
+[中文](https://github.com/d2-projects/d2-admin/blob/master/README.zh.md) | **English**
 
 ## Preview
 
-* [Preview](https://d2-admin.netlify.com) Deployed in Netlify CDN
-* [Preview For Chinese](https://d2admin.fairyever.com) Deployed in qiniu CDN
+![Deploy preview](https://github.com/d2-projects/d2-admin/workflows/Deploy%20preview/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a5dd4bbd-da3f-4145-98a9-8012577bdcf5/deploy-status)](https://app.netlify.com/sites/d2-admin/deploys)
+
+The following access addresses are built and deployed by the latest master branch code at the same time. The access effect is completely consistent. Please select the appropriate access link according to your own network situation.
+
+| server | link | server |
+| --- | --- | --- |
+| d2.pub | [preview](https://d2.pub/d2-admin/preview) | China server |
+| cdn.d2.pub | [preview](https://cdn.d2.pub/d2-admin/preview) | qiniu CDN |
+| github | [preview](https://d2-projects.github.io/d2-admin) | GitHub pages |
+| netlify | [preview](https://d2-admin.netlify.com) | Netlify CDN |
+
+## Document
+
+[document on https://d2.pub](https://d2.pub/zh/doc/d2-admin/)
+
+> d2.pub CDN mirror deployment [https://cdn.d2.pub](https://cdn.d2.pub)
 
 ## Features
 
@@ -93,32 +95,42 @@ D2Admin is a fully open source and free enterprise back-end product front-end in
 * Page loading progress bar `1.4.1 +`
 * Adaptive top menu bar `1.4.7 +`
 * Support for merging cells when exporting xslx `1.5.4 +`
+* Multiple tabs support drag and drop sorting `1.8.0 +`
+* load only local JavaScript code less than 60kb on the homepage `1.8.0 +`
+* Built in build file volume checking tool `1.8.0 +`
 
-## Other version
+## Other synchronous repositories
+
+| type | link |
+| --- | --- |
+| gitee | [https://gitee.com/d2-projects/d2-admin](https://gitee.com/d2-projects/d2-admin) |
+| coding | [https://d2-projects.coding.net/p/d2-projects/d/d2-admin/git](https://d2-projects.coding.net/p/d2-projects/d/d2-admin/git) |
+
+## Other versions
 
 | Name | HomePage  | Preview | Introduction |
 | --- | --- | --- | --- |
-| Starter template | [Github](https://github.com/d2-projects/d2-admin-start-kit) | [Preview](https://start-kit.d2admin.fairyever.com) |  |
-| D2 Admin Renren | Private project | [Preview](https://renren.d2admin.fairyever.com) | [renren](https://www.renren.io) |
-| Alibaba Ice scaffold | [Ice](https://alibaba.github.io/ice/scaffold?type=vue) | [Preview](https://ice.d2admin.fairyever.com) | [Introduction](https://juejin.im/post/5b6349716fb9a04f834669d6) |
+| Starter template | [Github](https://github.com/d2-projects/d2-admin-start-kit) | [preview](https://d2.pub/d2-admin-start-kit/preview) | The simplest version |
 
 ## Ecology
 
 | Name | HomePage  | Preview | Introduction |
 | --- | --- | --- | --- |
-| D2 Daily | [Github](https://github.com/d2-projects/d2-awesome) | [Site](https://awesome.fairyever.com/daily/) | Update news and resources in the design and technology circles every day |
-| D2 CRUD | [Github](https://github.com/d2-projects/d2-crud) | [Preview](https://d2admin.fairyever.com/#/demo/d2-crud/index) | Table common operation package |
-| D2 Ribbons | [Github](https://github.com/d2-projects/d2-ribbons) | [Preview](https://github.com/d2-projects/d2-ribbons) | Open source project logo library |
+| D2 CRUD | [Github](https://github.com/d2-projects/d2-crud) | [preview](https://d2.pub/d2-admin/preview/#/demo/d2-crud/index) | Table common operation package |
+| D2 Ribbons | [Github](https://github.com/d2-projects/d2-ribbons) | [preview](https://github.com/d2-projects/d2-ribbons) | Open source project logo library |
 
 ## Derived open source projects
 
 > These projects are contributed by the open source community and are not guaranteed to use the latest version of D2Admin. Please contact their open source authors for related usage questions.
 
-| Name | Github / HomePage | Preview | Introduction |
+| Name | HomePage | Preview | Introduction |
 | --- | --- | --- | --- |
-| d2-admin-pm | [Github](https://github.com/wjkang/d2-admin-pm) | [Preview](http://jaycewu.coding.me/d2-admin-pm) | RBAC privilege management solution based on D2Admin |
-| LanBlog | [Github](https://github.com/sinksmell/LanBlog) | [Preview](http://47.101.222.133/) | Vue + Beego restful api personal blog system |
-| d2-admin-start-kit-plus | [Github](https://github.com/hank-cp/d2-admin-start-kit-plus) | [Preview](https://github.com/hank-cp/d2-admin-start-kit-plus) | D2Admin Start kit modular version |
+| d2-admin-xiya-go-cms | [Github](https://github.com/d2-projects/d2-admin-xiya-go-cms) | [preview](https://d2.pub/d2-admin-xiya-go-cms/preview) | D2Admin + authority system + dynamic router |
+| d2-advance | [Github](https://github.com/d2-projects/d2-advance) | [preview](https://d2.pub/d2-advance/preview) | Technical exploration inspired by D2Admin |
+| d2-admin-pm | [Github](https://github.com/wjkang/d2-admin-pm) | [preview](http://jaycewu.coding.me/d2-admin-pm) | RBAC privilege management solution based on D2Admin |
+| LanBlog | [Github](https://github.com/sinksmell/LanBlog) | [preview](http://47.101.222.133/) | Vue + Beego restful api personal blog system |
+| d2-admin-start-kit-plus | [Github](https://github.com/hank-cp/d2-admin-start-kit-plus) | [preview](https://github.com/hank-cp/d2-admin-start-kit-plus) | D2Admin Start kit modular version |
+| d2-crud-plus | [Github](https://github.com/greper/d2-crud-plus) | [preview](http://qiniu.veryreader.com/D2CrudPlusExample/index.html#/index) | Easy development of crud function |
 
 ## Open source backend implementation
 
@@ -126,36 +138,57 @@ D2Admin is a fully open source and free enterprise back-end product front-end in
 
 | Name | technology | HomePage | Preview | Introduction |
 | --- | --- | --- | --- | --- |
-| **CareyShop** | ThinkPHP5 | [Github](https://github.com/dnyz520/careyshop-admin) | [Preview](https://demo.careyshop.cn/admin/#/index) | High Performance Mall Framework System for CareyShop |
-| **jiiiiiin-security** | Spring Boot + Spring Security | [Github](https://github.com/Jiiiiiin/jiiiiiin-security) | [Preview](https://github.com/Jiiiiiin/jiiiiiin-security) | Separate front-end and back-end content management infrastructure projects, focusing on user rights management functions |
-| **Taroco** | Spring Cloud | [Github](https://github.com/liuht777/Taroco) | [Preview](http://111.231.192.110/) | Complete microservice enterprise solution |
-| **Aooms** | Spring Cloud | [Gitee](https://gitee.com/cyb-javaer/Aooms) | [Preview](https://www.yuboon.com/Aooms) | Extremely fast microservice development, not just as simple as JFinal |
-| **GOA** | Beego | [Github](https://github.com/Qsnh/goa) | [Preview](http://goaio.vip/) | Online question answering system based on Beego + Vue |
+| **FlaskPermission** | Flask | [Github](https://github.com/huguodong/flask-permission) | [preview](http://47.97.218.139:9999) | Permission management based on Flask |
+| **CareyShop** | ThinkPHP5 | [Github](https://github.com/dnyz520/careyshop-admin) | [preview](https://demo.careyshop.cn/admin/#/index) | High Performance Mall Framework System for CareyShop |
+| **jiiiiiin-security** | Spring Boot | [Github](https://github.com/Jiiiiiin/jiiiiiin-security) | [preview](https://github.com/Jiiiiiin/jiiiiiin-security) | Separate front-end and back-end content management infrastructure projects, focusing on user rights management functions |
+| **Taroco** | Spring Cloud | [Github](https://github.com/liuht777/Taroco) | [preview](http://111.231.192.110/) | Complete microservice enterprise solution |
+| **Aooms** | Spring Cloud | [Gitee](https://gitee.com/cyb-javaer/Aooms) | [preview](https://www.yuboon.com/Aooms) | Extremely fast microservice development, not just as simple as JFinal |
+| **GOA** | Beego | [Github](https://github.com/Qsnh/goa) | [preview](http://goaio.vip/) | Online question answering system based on Beego + Vue |
+| **CMDB** | Django | [Github](https://github.com/CJFJack/django_vue_cmdb) | [preview](https://mp.weixin.qq.com/s?__biz=MzU1OTYzODA4Mw==&mid=2247484250&idx=1&sn=981024ac0580d8a3eba95742bd32b268) | authority system with dynamic menu |
 
 ## Badge
 
 If your open source project is based on D2Admin development, please add the following badge to your README:
 
 <a href="https://github.com/d2-projects/d2-admin" target="_blank">
-	<img src="https://raw.githubusercontent.com/FairyEver/d2-admin/master/doc/image/d2-admin@2x.png" width="200">
+	<img src="https://raw.githubusercontent.com/FairyEver/d2-admin/master/docs/image/d2-admin@2x.png" width="200">
 </a>
 
 Copy the following code into the README to:
 
 ``` html
-<a href="https://github.com/d2-projects/d2-admin" target="_blank"><img src="https://raw.githubusercontent.com/FairyEver/d2-admin/master/doc/image/d2-admin@2x.png" width="200"></a>
+<a href="https://github.com/d2-projects/d2-admin" target="_blank"><img src="https://raw.githubusercontent.com/FairyEver/d2-admin/master/docs/image/d2-admin@2x.png" width="200"></a>
 ```
 
 At the same time, you can report your project to us. We will place the excellent project in D2Admin and help you publicize it.
 
-## Important Contributor
+## Contributor
 
 * [@FairyEver](https://github.com/FairyEver)
 * [@sunhaoxiang](https://github.com/sunhaoxiang)
 * [@Aysnine](https://github.com/Aysnine)
+* [@luchaohai](https://github.com/luchaohai)
 * [@han-feng](https://github.com/han-feng)
 * [@rongxingsun](https://github.com/rongxingsun)
 * [@dnyz520](https://github.com/dnyz520)
+
+## Become a sponsor
+
+[Sponsor me on afdian.net](https://afdian.net/@fairyever)
+
+## Sponsor
+
+**cochlea** | **Baron** | **苦行僧** | **吴地安宁** | **KingDong** | **sunyongmofang**
+
+## Visitor
+
+![Total visitor](https://visitor-count-badge.herokuapp.com/total.svg?repo_id=d2-projects.d2-admin)
+
+> Total visitor since 2019.08.27
+
+## Star history
+
+[![Stargazers over time](https://starchart.cc/d2-projects/d2-admin.svg)](https://starchart.cc/d2-projects/d2-admin)
 
 ## License
 

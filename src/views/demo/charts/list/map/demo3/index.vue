@@ -4,9 +4,10 @@
     <div class="inner">
       <ve-map :data="chartData" :settings="chartSettings" v-bind="pubSetting"></ve-map>
     </div>
-    <template slot="footer">
-      <d2-link-btn title="更多示例和文档" link="https://v-charts.js.org"/>
-    </template>
+    <d2-link-btn
+      slot="footer"
+      title="更多示例和文档"
+      link="https://v-charts.js.org"/>
   </d2-container>
 </template>
 
@@ -33,10 +34,10 @@ export default {
       chartData: {
         columns: ['位置', '人口'],
         rows: [
-          { '位置': '吉林', ' 人口': 123 },
-          { '位置': '北京', ' 人口': 1223 },
-          { '位置': '上海', ' 人口': 2123 },
-          { '位置': '浙江', ' 人口': 4123 }
+          { 位置: '吉林', ' 人口': 123 },
+          { 位置: '北京', ' 人口': 1223 },
+          { 位置: '上海', ' 人口': 2123 },
+          { 位置: '浙江', ' 人口': 4123 }
         ]
       }
     }

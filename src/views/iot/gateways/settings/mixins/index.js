@@ -1,7 +1,3 @@
-import {
-  detail
-} from '@api/iot.gateways'
-
 export default {
   props: {
     id: {
@@ -26,23 +22,18 @@ export default {
       }
     },
     // [业务逻辑] 根据 id 获取数据
-    getFormData (id) {
-      return new Promise((resolve, reject) => {
-        // 重置表单
-        this.resetFormData()
-        // 请求数据
-        detail(id)
-          .then(res => {
-            const { name, address } = res
-            this.form = { name, address }
-            this.$message.success('getFormData')
-            resolve()
-          })
-          .catch(err => {
-            console.log('getFormData failed!', err)
-            reject(err)
-          })
-      })
+    async getFormData (id) {
+      // 重置表单
+      this.resetFormData()
+      // 请求数据
+      try {
+        const res = await this.$api.IOT_GATEWAYS_DETAIL(id)
+        const { name, address } = res
+        this.form = { name, address }
+        this.$message.success('getFormData')
+      } catch (error) {
+        console.log('error', error)
+      }
     },
     // [业务逻辑] 提交
     handleSubmit () {

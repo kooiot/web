@@ -4,7 +4,6 @@ import d2Crud from './modules/d2-crud'
 import plugins from './modules/plugins'
 import charts from './modules/charts'
 import components from './modules/components'
-import element from './modules/element'
 import business from './modules/business'
 import iot from './modules/iot'
 import store from './modules/store'
@@ -30,6 +29,7 @@ const frameIn = [
         path: 'index',
         name: 'index',
         meta: {
+          title: 'Home',
           auth: false
         },
         component: _import('system/index')
@@ -70,7 +70,6 @@ const frameIn = [
   plugins,
   charts,
   components,
-  element,
   business
 ]
 

@@ -6,13 +6,20 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 import store from '@/store/index'
-
 import util from '@/libs/util.js'
-
-import i18n from '@/i18n'
 
 // 路由数据
 import routes from './routes'
+
+// fix vue-router NavigationDuplicated
+const VueRouterPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push (location) {
+  return VueRouterPush.call(this, location).catch(err => err)
+}
+const VueRouterReplace = VueRouter.prototype.replace
+VueRouter.prototype.replace = function replace (location) {
+  return VueRouterReplace.call(this, location).catch(err => err)
+}
 
 Vue.use(VueRouter)
 
@@ -65,7 +72,7 @@ router.afterEach(to => {
   // 多页控制 打开新的页面
   store.dispatch('d2admin/page/open', to)
   // 更改标题
-  util.title(i18n.t(to.meta.title))
+  util.title(this.$t(to.meta.title))
 })
 
 export default router

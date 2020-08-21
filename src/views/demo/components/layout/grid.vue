@@ -25,19 +25,23 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import { GridLayout, GridItem } from 'vue-grid-layout'
+Vue.component('d2-grid-layout', GridLayout)
+Vue.component('d2-grid-item', GridItem)
 export default {
   data () {
     return {
       layout: {
         layout: [
-          { 'x': 0, 'y': 0, 'w': 4, 'h': 10, 'i': '0' },
-          { 'x': 4, 'y': 0, 'w': 2, 'h': 5, 'i': '1' },
-          { 'x': 6, 'y': 0, 'w': 4, 'h': 5, 'i': '2' },
-          { 'x': 10, 'y': 0, 'w': 2, 'h': 10, 'i': '3' },
-          { 'x': 4, 'y': 5, 'w': 4, 'h': 5, 'i': '4' },
-          { 'x': 8, 'y': 5, 'w': 2, 'h': 5, 'i': '5' },
-          { 'x': 0, 'y': 10, 'w': 8, 'h': 5, 'i': '6' },
-          { 'x': 8, 'y': 10, 'w': 4, 'h': 5, 'i': '7' }
+          { x: 0, y: 0, w: 4, h: 10, i: '0' },
+          { x: 4, y: 0, w: 2, h: 5, i: '1' },
+          { x: 6, y: 0, w: 4, h: 5, i: '2' },
+          { x: 10, y: 0, w: 2, h: 10, i: '3' },
+          { x: 4, y: 5, w: 4, h: 5, i: '4' },
+          { x: 8, y: 5, w: 2, h: 5, i: '5' },
+          { x: 0, y: 10, w: 8, h: 5, i: '6' },
+          { x: 8, y: 10, w: 4, h: 5, i: '7' }
         ],
         colNum: 12,
         rowHeight: 30,

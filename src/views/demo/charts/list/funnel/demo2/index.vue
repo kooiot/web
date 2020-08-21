@@ -4,9 +4,10 @@
     <div class="inner">
       <ve-funnel :data="chartData" :settings="chartSettings" v-bind="pubSetting"></ve-funnel>
     </div>
-    <template slot="footer">
-      <d2-link-btn title="更多示例和文档" link="https://v-charts.js.org"/>
-    </template>
+    <d2-link-btn
+      slot="footer"
+      title="更多示例和文档"
+      link="https://v-charts.js.org"/>
   </d2-container>
 </template>
 
@@ -24,10 +25,10 @@ export default {
       chartData: {
         columns: ['状态', '数值'],
         rows: [
-          { '状态': '展示', '数值': 900 },
-          { '状态': '访问', '数值': 600 },
-          { '状态': '点击', '数值': 300 },
-          { '状态': '订单', '数值': 100 }
+          { 状态: '展示', 数值: 900 },
+          { 状态: '访问', 数值: 600 },
+          { 状态: '点击', 数值: 300 },
+          { 状态: '订单', 数值: 100 }
         ]
       }
     }

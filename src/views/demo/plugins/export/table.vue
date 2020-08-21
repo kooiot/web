@@ -23,14 +23,23 @@
 </template>
 
 <script>
-// 假数据
-import table from './data'
+import Vue from 'vue'
+import pluginExport from '@d2-projects/vue-table-export'
+Vue.use(pluginExport)
 export default {
   data () {
     return {
       table: {
-        columns: table.columns,
-        data: table.data,
+        columns: [
+          { label: 'ID', prop: 'id' },
+          { label: '名称', prop: 'name' },
+          { label: '创建日期', prop: 'creatDate' },
+          { label: '地址', prop: 'address' },
+          { label: '邮编', prop: 'zip' }
+        ],
+        data: [
+          { id: 1, name: 'Lucy', creatDate: '2020-05-07', address: 'Address', zip: '000000' }
+        ],
         size: 'mini',
         stripe: true,
         border: true

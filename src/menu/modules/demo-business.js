@@ -5,7 +5,6 @@ export default {
   children: (pre => [
     { path: `${pre}index`, title: 'Demo', icon: 'home' },
     {
-      path: `${pre}table`,
       title: 'Table',
       icon: 'table',
       children: [
@@ -13,7 +12,6 @@ export default {
       ]
     },
     {
-      path: `${pre}issues`,
       title: 'ISSUES',
       icon: 'github',
       children: [

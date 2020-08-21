@@ -1,39 +1,13 @@
 <template>
-  <el-table
-    :data="list"
-    v-bind="table">
-    <el-table-column
-      prop="title"
-      align="center"
-      width="160"/>
-    <el-table-column
-      :label="$t('Preview')"
-      width="120">
-      <div
-        slot-scope="scope"
-        class="theme-preview"
-        :style="{
-          backgroundImage: `url(${$baseUrl}${scope.row.preview})`
-        }">
-      </div>
+  <el-table :data="list" v-bind="table">
+    <el-table-column prop="title" align="center" width="160"/>
+    <el-table-column label="$t('Preview')" width="120">
+      <div slot-scope="scope" class="theme-preview" :style="{ backgroundImage: `url(${$baseUrl}${scope.row.preview})` }"/>
     </el-table-column>
-    <el-table-column
-      prop="address"
-      align="center">
+    <el-table-column prop="address" align="center">
       <template slot-scope="scope">
-        <el-button
-          v-if="activeName === scope.row.name"
-          type="success"
-          icon="el-icon-check"
-          round>
-          {{$t('In use')}}
-        </el-button>
-        <el-button
-          v-else
-          round
-          @click="handleSelectTheme(scope.row.name)">
-          {{$t('Use this')}}
-        </el-button>
+        <el-button v-if="activeName === scope.row.name" type="success" icon="el-icon-check" round>{{$t('In use')}}</el-button>
+        <el-button v-else round @click="handleSelectTheme(scope.row.name)">{{$t('Use this')}}</el-button>
       </template>
     </el-table-column>
   </el-table>

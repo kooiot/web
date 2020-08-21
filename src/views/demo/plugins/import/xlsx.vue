@@ -1,12 +1,11 @@
 <template>
   <d2-container type="card">
-    <template slot="header">导入 xlsx</template>
-    <div class="d2-mb">
+    <template slot="header">
       <el-button @click="download">
         <d2-icon name="download"/>
         下载演示 .xlsx 表格
       </el-button>
-    </div>
+    </template>
     <div class="d2-mb">
       <el-upload :before-upload="handleUpload" action="default">
         <el-button type="success">
@@ -27,6 +26,10 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import pluginImport from '@d2-projects/vue-table-import'
+Vue.use(pluginImport)
+
 export default {
   data () {
     return {
@@ -54,7 +57,7 @@ export default {
       return false
     },
     download () {
-      window.location.href = 'http://fairyever.qiniudn.com/d2-admin-import-xlsx-demo.xlsx'
+      this.$open('https://cdn.d2.pub/files/d2-admin/demo-table.xlsx')
     }
   }
 }
