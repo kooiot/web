@@ -1,3 +1,4 @@
+<i18n src="./lang.json"></i18n>
 <template>
   <el-table :data="list" v-bind="table">
     <el-table-column prop="title" align="center" width="160"/>

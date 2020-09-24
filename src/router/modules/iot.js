@@ -15,7 +15,7 @@ export default {
     {
       path: 'dashboard',
       name: `${pre}dashboard`,
-      component: _import('demo/business/index'),
+      component: _import('iot/gateways'),
       meta: {
         ...meta,
         title: 'Dashboard'

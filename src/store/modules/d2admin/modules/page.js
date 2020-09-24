@@ -216,6 +216,19 @@ export default {
     },
     /**
      * @class opened
+     * @description 更新一个 tag title
+     * @param {Object} context
+     * @param {Object} payload { tagName: 要更新的标签名字, title: 新的标签名字 }
+     */
+    update ({ state }, { tagName, title }) {
+      const index = state.opened.findIndex(page => page.fullPath === tagName)
+      if (index === 0) return
+      if (title && state.opened[index]) {
+        state.opened[index].meta.title = title
+      }
+    },
+    /**
+     * @class opened
      * @description 关闭当前标签左边的标签
      * @param {Object} context
      * @param {Object} payload { pageSelect: 当前选中的tagName }
@@ -229,10 +242,7 @@ export default {
       if (currentIndex > 0) {
         // 删除打开的页面 并在缓存设置中删除
         for (let i = state.opened.length - 1; i >= 0; i--) {
-          if (state.opened[i].name === 'index' || i >= currentIndex) {
-            continue
-          }
-
+          if (state.opened[i].name === 'index' || i >= currentIndex) continue
           commit('keepAliveRemove', state.opened[i].name)
           state.opened.splice(i, 1)
         }
@@ -257,10 +267,7 @@ export default {
       })
       // 删除打开的页面 并在缓存设置中删除
       for (let i = state.opened.length - 1; i >= 0; i--) {
-        if (state.opened[i].name === 'index' || currentIndex >= i) {
-          continue
-        }
-
+        if (state.opened[i].name === 'index' || currentIndex >= i) continue
         commit('keepAliveRemove', state.opened[i].name)
         state.opened.splice(i, 1)
       }
@@ -284,10 +291,7 @@ export default {
       })
       // 删除打开的页面数据 并更新缓存设置
       for (let i = state.opened.length - 1; i >= 0; i--) {
-        if (state.opened[i].name === 'index' || currentIndex === i) {
-          continue
-        }
-
+        if (state.opened[i].name === 'index' || currentIndex === i) continue
         commit('keepAliveRemove', state.opened[i].name)
         state.opened.splice(i, 1)
       }
@@ -305,10 +309,7 @@ export default {
     async closeAll ({ state, commit, dispatch }) {
       // 删除打开的页面 并在缓存设置中删除
       for (let i = state.opened.length - 1; i >= 0; i--) {
-        if (state.opened[i].name === 'index') {
-          continue
-        }
-
+        if (state.opened[i].name === 'index') continue
         commit('keepAliveRemove', state.opened[i].name)
         state.opened.splice(i, 1)
       }
@@ -380,11 +381,9 @@ export default {
         routes.forEach(route => {
           if (route.children && route.children.length > 0) {
             push(route.children)
-          } else {
-            if (!route.hidden) {
-              const { meta, name, path } = route
-              pool.push({ meta, name, path })
-            }
+          } else if (!route.hidden) {
+            const { meta, name, path } = route
+            pool.push({ meta, name, path })
           }
         })
       }

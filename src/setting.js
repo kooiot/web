@@ -59,13 +59,13 @@ export default {
         preview: 'image/theme/line/preview@2x.png'
       },
       {
-        title: this.$t('star theme'),
+        title: 'star theme',
         name: 'star',
         backgroundImage: 'image/theme/star/bg.jpg',
         preview: 'image/theme/star/preview@2x.png'
       },
       {
-        title: this.$t('Tomorrow Night Blue (vsCode)'),
+        title: 'Tomorrow Night Blue (vsCode)',
         name: 'tomorrow-night-blue',
         preview: 'image/theme/tomorrow-night-blue/preview@2x.png'
       }

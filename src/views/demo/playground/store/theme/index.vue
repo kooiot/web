@@ -1,9 +1,11 @@
+<i18n src="./lang.json"></i18n>
+
 <template>
   <d2-container type="card" class="page">
-    <template slot="header">主题</template>
+    <template slot="header">{{$t('Theme')}}</template>
     <el-table :data="list" v-bind="table">
       <el-table-column prop="name" align="center" width="260"/>
-      <el-table-column label="预览" width="120">
+      <el-table-column label="$t('Preview')" width="120">
         <div
           slot-scope="scope"
           class="theme-preview"
@@ -12,7 +14,7 @@
       </el-table-column>
       <el-table-column prop="address" align="center">
         <template slot-scope="scope">
-          <el-button v-if="activeName === scope.row.name" type="success" icon="el-icon-check" round>已激活</el-button>
+          <el-button v-if="activeName === scope.row.name" type="success" icon="el-icon-check" round>Activated</el-button>
           <el-button v-else round @click="handleSelectTheme(scope.row.name)">使用</el-button>
         </template>
       </el-table-column>
@@ -28,7 +30,7 @@
       slot="footer"
       type="primary"
       size="small">
-      当前激活主题 {{activeName}}
+      {{$t('Activated Theme')}} {{activeName}}
     </el-button>
   </d2-container>
 </template>

@@ -1,0 +1,13 @@
+{
+    "zh-chs": {
+        "Activated Theme": "当前激活主题",
+        "check": {
+            "title": "请选择",
+            "label": {
+                "Beijing": "北京",
+                "Tokyo": "东京",
+                "NewYork": "纽约"
+            }
+        }
+    }
+}

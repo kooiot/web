@@ -54,7 +54,7 @@ export default {
         filter: ''
       },
       rules: {
-        status: [ { required: true, message: '请选择一个状态', trigger: 'change' } ]
+        status: [{ required: true, message: '请选择一个状态', trigger: 'change' }]
       }
     }
   },

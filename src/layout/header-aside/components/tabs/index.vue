@@ -74,6 +74,7 @@ export default {
         { icon: 'times-circle', title: 'Close All', value: 'all' }
       ],
       contextmenuList: [
+        { icon: 'refresh', title: 'Refresh', value: 'refresh' },
         { icon: 'arrow-left', title: 'Close Left', value: 'left' },
         { icon: 'arrow-right', title: 'Close Right', value: 'right' },
         { icon: 'times', title: 'Close Other', value: 'other' },
@@ -142,6 +143,7 @@ export default {
       if (tagName) this.contextmenuFlag = false
       const params = { pageSelect: tagName }
       switch (command) {
+        case 'refresh': this.$router.push({ name: 'refresh' }); break
         case 'left': this.closeLeft(params); break
         case 'right': this.closeRight(params); break
         case 'other': this.closeOther(params); break

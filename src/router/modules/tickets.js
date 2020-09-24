@@ -15,7 +15,7 @@ export default {
     {
       path: 'index',
       name: `${pre}index`,
-      component: _import('demo/business/index'),
+      component: _import('demo/components/index'),
       meta: {
         ...meta,
         title: 'Tickets Center'
