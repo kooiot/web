@@ -12,5 +12,12 @@
         "In use": "已激活",
         "Use this": "使用",
         "Theme": "主题"
+    },
+    "en": {
+        "Activated Theme": "当前激活主题",
+        "Preview": "预览",
+        "In use": "已激活",
+        "Use this": "使用",
+        "Theme": "主题"
     }
 }

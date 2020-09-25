@@ -7,7 +7,7 @@ Vue.use(VueI18n)
 function loadLocaleMessages () {
   const locales = require.context('./locales', true, /[A-Za-z0-9-_,\s]+\.json$/i)
   const messages = {}
-  for (const key of locales.keys()) {
+  locales.keys().forEach(key => {
     const matched = key.match(/([A-Za-z0-9-_]+)\./i)
     if (matched && matched.length > 1) {
       const locale = matched[1]
@@ -17,21 +17,20 @@ function loadLocaleMessages () {
         ...localeElementUI ? localeElementUI.default : {}
       }
     }
-  }
+  })
   return messages
 }
 
 const messages = loadLocaleMessages()
 
-Vue.prototype.$languages = Object.keys(messages).map(langlage => ({
-  label: messages[langlage]._name,
-  value: langlage
+Vue.prototype.$languages = Object.keys(messages).map(language => ({
+  label: messages[language]._name,
+  value: language
 }))
 
-const i18n = new VueI18n({
+export default new VueI18n({
   locale: util.cookies.get('lang') || process.env.VUE_APP_I18N_LOCALE,
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE,
+  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'zh-chs',
+  silentTranslationWarn: true,
   messages
 })
-
-export default i18n

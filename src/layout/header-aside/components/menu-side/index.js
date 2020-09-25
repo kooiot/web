@@ -23,7 +23,7 @@ export default {
         this.aside.length === 0 && !this.asideCollapse
           ? <div class="d2-layout-header-aside-menu-empty" flex="dir:top main:center cross:center">
             <d2-icon name="inbox"></d2-icon>
-            <span>this.$t('No sider menu')</span>
+            <span>{ this.$t('No sider menu') }</span>
           </div>
           : null
       }
