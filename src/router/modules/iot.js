@@ -18,7 +18,8 @@ export default {
       component: _import('iot/gateways'),
       meta: {
         ...meta,
-        title: 'Dashboard'
+        title: 'Dashboard',
+        category: 'all'
       }
     },
     {
